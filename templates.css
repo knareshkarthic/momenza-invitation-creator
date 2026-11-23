@@ -1,0 +1,76 @@
+/* Invitation designs. Fixed 1080x1350 canvas; scaled for display in .fit */
+.vars{display:contents}
+.inv{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--bg);color:var(--ink);font-family:var(--f2),Georgia,serif;line-height:1.2}
+.inv *{box-sizing:border-box}
+.inv p,.inv h1{margin:0}
+.inv .in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:170px 140px;z-index:2}
+.inv i{display:block;position:absolute}
+.inv svg{position:absolute;display:block}
+.inv .kick{font-size:28px;letter-spacing:.38em;text-transform:uppercase;color:var(--ac);margin-bottom:44px;font-weight:600}
+.inv .main{font-family:var(--f1),serif;font-weight:400;line-height:1.08;overflow-wrap:anywhere}
+.inv .sub{font-size:34px;font-style:italic;margin-top:30px;opacity:.85}
+.inv .rule{width:200px;height:3px;background:var(--ac);margin:54px auto}
+.inv .msg{font-size:36px;line-height:1.5;max-width:780px;margin-bottom:54px}
+.inv .when{font-size:38px;font-weight:600;display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+.inv .when i{position:static;display:inline;color:var(--ac);font-style:normal}
+.inv .venue{font-size:34px;letter-spacing:.04em;max-width:760px;line-height:1.35}
+.inv .age{font-family:var(--f1),serif;font-size:260px;line-height:1;color:var(--ac)}
+/* corners / frames shared */
+.cn.tl{left:70px;top:70px}.cn.tr{right:70px;top:70px}.cn.bl{left:70px;bottom:70px}.cn.br{right:70px;bottom:70px}
+/* Royal */
+.t-royal .b1{inset:44px;border:4px solid var(--ac)}.t-royal .b2{inset:66px;border:1.5px solid var(--ac)}
+.t-royal .rule{width:260px;height:2px}
+/* Floral */
+.t-floral .in{padding:330px 190px 260px}.t-floral .panel{inset:190px 110px;background:rgba(255,255,255,.72);border:2px solid var(--ac);border-radius:480px 480px 30px 30px;z-index:1}
+.t-floral .fl{left:0;top:0;z-index:3}.t-floral .rule{width:120px;height:2px}
+/* Modern birthday */
+.t-modern .in{align-items:flex-start;text-align:left;justify-content:flex-end;padding:150px 120px}
+.t-modern .main{font-weight:800;letter-spacing:-.02em}.t-modern .age{font-weight:800;font-size:380px;letter-spacing:-.04em;margin-bottom:10px}
+.t-modern .rule{margin-left:0;background:var(--ink);height:12px;width:140px;border-radius:6px}.t-modern .when{justify-content:flex-start}
+.t-modern .kick{color:var(--ink)}.t-modern .cf{left:0;top:0;z-index:1}
+/* Luxury birthday */
+.t-lux .fr{inset:50px;border:2px solid var(--ac)}.t-lux .fr2{inset:72px;border:1px solid var(--ac)}
+.t-lux .burst{left:240px;top:90px;opacity:.9}.t-lux .in{padding:300px 140px 150px}
+.t-lux .main{text-transform:uppercase;letter-spacing:.08em}.t-lux .age{font-size:240px;font-weight:400}
+/* Housewarming */
+.t-house .in{padding:300px 150px 150px}.t-house .house{left:420px;top:100px}
+.t-house .sp{left:0;bottom:0;z-index:1}.t-house .sp.r{left:auto;right:0}
+.t-house .sub,.t-house .kick{opacity:1}
+/* Graduation */
+.t-grad .fr{inset:56px;border:3px solid var(--ac)}.t-grad .cap{left:390px;top:130px}
+.t-grad .in{padding:320px 140px 150px}.t-grad .main{text-transform:uppercase;letter-spacing:.06em}
+/* Baby */
+.t-baby .fr{inset:60px;border:4px dashed var(--ac);border-radius:60px}.t-baby .bb{left:0;top:0;z-index:1}
+.t-baby .in{padding:260px 170px}
+/* General */
+.t-gen .bar{left:0;top:0;bottom:0;width:70px;background:var(--ac)}.t-gen .gc{right:-160px;top:-110px}
+.t-gen .in{align-items:flex-start;text-align:left;justify-content:flex-end;padding:150px 130px 150px 150px}
+.t-gen .main{text-transform:uppercase;letter-spacing:-.01em}.t-gen .rule{margin-left:0;height:8px}.t-gen .when{justify-content:flex-start}
+/* scaled display wrapper */
+.fit{position:relative;aspect-ratio:4/5;overflow:hidden;width:100%;background:#ddd}
+.fit .inv{position:absolute;left:0;top:0;transform-origin:0 0}
+/* ===== Phase 2: layouts and motifs ===== */
+.inv .bg{left:0;top:0;z-index:1}
+.g-left .in{align-items:flex-start;text-align:left;justify-content:flex-end;padding:150px 130px}.g-left .rule{margin-left:0}.g-left .when{justify-content:flex-start}
+.g-top .in{justify-content:flex-start;padding-top:230px}
+.g-caps .main{text-transform:uppercase;letter-spacing:.09em}
+.g-band .main{background:var(--ac);color:var(--bg);width:1080px;padding:46px 140px}
+.m-corner .b1,.m-double .b1{inset:44px;border:4px solid var(--ac)}.m-corner .b2,.m-double .b2{inset:66px;border:1.5px solid var(--ac)}
+.m-thick .b1{inset:40px;border:18px solid var(--ac)}.m-dashed .b1{inset:60px;border:4px dashed var(--ac);border-radius:50px}
+.m-arch .b1{inset:110px;border:4px solid var(--ac);border-radius:460px 460px 0 0}.m-arch .in{padding:260px 190px 190px}
+.m-floral .panel{inset:190px 110px;background:rgba(255,255,255,.72);border:2px solid var(--ac);border-radius:480px 480px 30px 30px;z-index:1}
+.m-floral .fl{left:0;top:0;z-index:3}.m-floral .in{padding:330px 190px 260px}
+.m-confetti .cf{left:0;top:0;z-index:1}
+.m-burst .fr{inset:50px;border:2px solid var(--ac)}.m-burst .fr2{inset:72px;border:1px solid var(--ac)}.m-burst .burst{left:240px;top:90px}.m-burst .in{padding:300px 140px 150px}
+.m-house .house{left:420px;top:100px}.m-house .in{padding:300px 150px 150px}
+.m-leaves .sp,.m-house .sp{left:0;bottom:0;z-index:1}.m-leaves .sp.r,.m-house .sp.r{left:auto;right:0}
+.m-cap .fr{inset:56px;border:3px solid var(--ac)}.m-cap .cap{left:390px;top:130px}.m-cap .in{padding:320px 140px 150px}
+.m-stars .fr{inset:60px;border:4px dashed var(--ac);border-radius:60px}.m-stars .bb{left:0;top:0;z-index:1}.m-stars .in{padding:260px 170px}
+.m-geo .bar{left:0;top:0;bottom:0;width:70px;background:var(--ac)}.m-geo .gc{right:-160px;top:-110px}
+/* ===== Phase 7: extra layouts (appended last so they win over motif padding) ===== */
+.g-right .in{align-items:flex-end;text-align:right;justify-content:flex-end;padding:150px 130px}.g-right .rule{margin-right:0}.g-right .when{justify-content:flex-end}
+.g-lower .in{justify-content:flex-end;padding-bottom:190px}
+.g-side::before{content:"";position:absolute;left:150px;top:140px;bottom:140px;width:5px;background:var(--ac);z-index:2}
+.g-side .in{align-items:flex-start;text-align:left;padding:150px 130px 150px 250px}.g-side .rule{margin-left:0}.g-side .when{justify-content:flex-start}
+.g-boxed .in{inset:150px 110px;padding:60px;background:var(--bg);border:3px solid var(--ac);outline:1px solid var(--ac);outline-offset:-14px}
+.g-wide .main{text-transform:uppercase;letter-spacing:.16em}.g-ital .main{font-style:italic}

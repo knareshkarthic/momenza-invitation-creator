@@ -1,0 +1,9 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MOMENZA image check</title>
+<style>body{font:16px system-ui;margin:2rem;background:#f8f3e8;color:#1f3a2e}li{margin:.6rem 0;display:flex;gap:1rem;align-items:center}img{width:90px;height:110px;object-fit:cover}.ok{color:#2b7a3d}.bad{color:#b3261e;font-weight:600}</style></head>
+<body><h1>Image check</h1><p>Open this file in your browser after adding the photos.</p><ul id="l"></ul>
+<script>
+["hero/hero-celebration","categories/wedding","categories/birthday","categories/housewarming","categories/graduation","categories/baby-shower","categories/general-events"].forEach(n=>{
+ const li=document.createElement("li"),src="assets/images/"+n+".jpg",im=new Image(),t=document.createElement("span");
+ t.textContent=src+" … checking";im.onload=()=>{t.textContent=src+" – OK ("+im.naturalWidth+"×"+im.naturalHeight+")";t.className="ok";li.prepend(im)};
+ im.onerror=()=>{t.textContent=src+" – MISSING";t.className="bad"};im.src=src;li.append(t);document.getElementById("l").append(li)});
+</script></body></html>

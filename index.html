@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOMENZA – Make Every Moment Memorable</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="MOMENZA: create beautiful wedding, birthday, housewarming, graduation and baby shower invitations. Choose a design, personalise it and download. Make every moment memorable.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Serif+Display&family=Dancing+Script&family=Fredoka:wght@400;600&family=Great+Vibes&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600&family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/templates.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#home" class="brand" aria-label="MOMENZA home"><svg class="mark" viewBox="0 0 40 40" width="34" height="34" aria-hidden="true"><circle cx="20" cy="22" r="16" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M11 29V16l9 9 9-9v13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M20 1.5v6M17 4.5h6" stroke="#c9a45c" stroke-width="1.8" stroke-linecap="round"/></svg><span class="wm" data-brand>MOMENZA</span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <nav id="menu" aria-label="Main">
+      <a href="#home">Home</a><a href="#templates">Explore Templates</a><a href="#mine">My Invitations</a><a href="#about">About</a>
+      <a href="#templates" class="btn small">Create Invitation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- HOME -->
+<section class="view" id="view-home">
+  <div class="hero wrap">
+    <div class="hero-copy">
+      <h1>Celebrate beautifully. Remember forever.</h1>
+      <p>Create extraordinary invitations for life's most meaningful moments. Discover your style, personalise every detail and share your celebration.</p>
+      <div class="row"><a class="btn" href="#templates">Create Your Invitation</a><a class="btn ghost" href="#templates">Explore Templates</a></div>
+      <p class="hero-meta" id="hero-meta"></p>
+    </div>
+    <div class="hero-art" id="hero-art"></div>
+  </div>
+  <div class="wrap block"><h2>Browse by occasion</h2><div class="cats3" id="cat-grid"></div></div>
+  <div id="collections"></div>
+  <div class="band" id="how"><div class="wrap">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><b>Choose an occasion</b><span>Wedding, birthday, housewarming and more.</span></li>
+      <li><b>Select a beautiful template</b><span>Search by colour, style or keyword.</span></li>
+      <li><b>Personalise your invitation</b><span>Names, details, colours and fonts, with a live preview.</span></li>
+      <li><b>Download and share</b><span>Get a PNG or PDF, or save it to edit later.</span></li>
+    </ol>
+  </div></div>
+  <div class="wrap block" id="about"><h2>Why MOMENZA</h2>
+    <ul class="why">
+      <li><b>Professionally designed</b> Every invitation has its own character.</li>
+      <li><b>Easy customisation</b> Change colours and fonts without breaking the layout.</li>
+      <li><b>Instant preview</b> Your invitation updates as you type.</li>
+      <li><b>High-quality downloads</b> 1080 × 1350 PNG and PDF.</li>
+      <li><b>Simple to use</b> No design skills and no sign-up.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TEMPLATES -->
+<section class="view" id="view-templates" hidden>
+  <div class="wrap block"><h1 class="page-h">Templates</h1>
+    <div class="toolbar">
+      <div class="search"><input id="q" type="search" placeholder="Search by name, colour, style or occasion" aria-label="Search templates" autocomplete="off"><button type="button" id="q-clear" class="btn ghost small" hidden>Clear</button></div>
+      <select id="f-col" aria-label="Colour"></select><select id="f-sty" aria-label="Design style"></select>
+      <select id="f-sort" aria-label="Sort by"><option value="featured">Featured</option><option value="recent">Recently added</option><option value="az">Alphabetical</option></select>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filter by occasion"></div>
+    <p class="count" id="count" role="status"></p>
+    <div class="grid" id="gallery"></div>
+    <nav class="pager" id="pager" aria-label="Template pages"></nav>
+  </div>
+</section>
+
+<!-- EDITOR -->
+<section class="view" id="view-editor" hidden>
+  <div class="wrap editor">
+    <div class="preview-col"><div class="preview-box" id="preview"></div></div>
+    <form class="form-col" id="form" novalidate>
+      <h1 class="page-h" id="ed-title"></h1>
+      <div id="fields"></div>
+      <fieldset><legend>Colours</legend><div class="swatches" id="palettes"></div></fieldset>
+      <fieldset><legend>Typography</legend><select id="font" aria-label="Font style"></select></fieldset>
+      <label class="check"><input type="checkbox" id="decor" checked> Show decorative elements</label>
+      <div class="actions">
+        <button type="button" class="btn" id="save">Save invitation</button>
+        <button type="button" class="btn ghost" id="dl-png">Download PNG</button>
+        <button type="button" class="btn ghost" id="dl-pdf">Download PDF</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section class="view" id="view-mine" hidden>
+  <div class="wrap block">
+    <div class="row between"><h1 class="page-h">My invitations</h1><a class="btn" href="#templates">Create new invitation</a></div>
+    <h2>Saved invitations</h2><div class="grid" id="saved"></div>
+    <h2>Favourite templates</h2><div class="grid" id="favs"></div>
+    <p class="note">Invitations are stored in this browser only. They won't appear on other devices.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap foot-in">
+  <div><b class="wm" data-brand>MOMENZA</b><p>Make Every Moment Memorable.</p></div>
+  <nav aria-label="Footer"><a href="#home">Home</a><a href="#templates">Explore Templates</a><a href="#mine">My Invitations</a><a href="#about">About</a></nav>
+  <p>hello@example.com<br>© <span id="year"></span> <span data-brand>MOMENZA</span>. Invitations are saved in your browser only.</p>
+</div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="js/templates.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/download.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
